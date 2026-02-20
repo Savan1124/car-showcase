@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Motors - Premium Car Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-car"></i>
+                Luxe Motors
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#showcase">Showroom</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#test-drive">Test Drive</a></li>
+                <li><a href="#service-booking">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                        <span id="themeText">Dark</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Experience Luxury Driving</h1>
+                <p>Discover our exclusive collection of premium vehicles designed for those who demand excellence.</p>
+                <div class="hero-buttons">
+                    <a href="#showcase" class="btn btn-primary">Explore Collection</a>
+                    <a href="#test-drive" class="btn btn-secondary">Book Test Drive</a>
+                </div>
+            </div>
+            <div class="car-3d-container">
+                <div class="car-3d">
+                    <div class="car-model">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMVEryfLg4NZIRRHD-HEPIWKRbmBASD_73fQ&s" alt="Luxury Sports Car">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="car-showcase" id="showcase">
+        <div class="section-header fade-in">
+            <h2>Premium Collection</h2>
+            <p>Explore our handpicked selection of the world's most prestigious automobiles</p>
+        </div>
+        <div class="filter-container fade-in">
+            <button class="filter-btn active" data-filter="all">All Cars</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="suv">SUV</button>
+            <button class="filter-btn" data-filter="sedan">Sedan</button>
+            <button class="filter-btn" data-filter="electric">Electric</button>
+        </div>
+        <div class="car-grid" id="carGrid">
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header fade-in">
+            <h2>Premium Services</h2>
+            <p>Comprehensive automotive solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-car-side"></i>
+                </div>
+                <h3>Test Drive</h3>
+                <p>Experience your dream car on the road with our exclusive test drive service.</p>
+                <a href="#test-drive" class="btn btn-primary">Book Now</a>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Maintenance</h3>
+                <p>Expert maintenance services by certified technicians using genuine parts.</p>
+                <a href="#service-booking" class="btn btn-primary">Schedule</a>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Warranty</h3>
+                <p>Comprehensive warranty packages to protect your investment and peace of mind.</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Trade-In</h3>
+                <p>Get the best value for your current vehicle with our hassle-free trade-in program.</p>
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+            </div>
+        </div>
+    </section>
+    <!-- Test Drive Booking Section -->
+    <section class="booking-section" id="test-drive">
+        <div class="section-header fade-in">
+            <h2>Book a Test Drive</h2>
+            <p>Experience the thrill of driving your dream car</p>
+        </div>
+        <div class="booking-container fade-in">
+            <form id="testDriveForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="testName">Full Name</label>
+                        <input type="text" id="testName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="testEmail">Email Address</label>
+                        <input type="email" id="testEmail" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="testPhone">Phone Number</label>
+                        <input type="tel" id="testPhone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="testCar">Select Car</label>
+                        <select id="testCar" class="form-control" required>
+                            <option value="">Choose a car</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="testDate">Preferred Date</label>
+                        <input type="date" id="testDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="testTime">Preferred Time</label>
+                        <select id="testTime" class="form-control" required>
+                            <option value="">Select time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="testMessage">Additional Message</label>
+                    <textarea id="testMessage" class="form-control" rows="4" placeholder="Any specific requirements or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Book Test Drive</button>
+            </form>
+        </div>
+    </section>
+    <!-- Service Booking Section -->
+    <section class="booking-section" id="service-booking">
+        <div class="section-header fade-in">
+            <h2>Schedule Service</h2>
+            <p>Keep your vehicle in perfect condition with our expert service</p>
+        </div>
+        <div class="booking-container fade-in">
+            <form id="serviceForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="serviceName">Full Name</label>
+                        <input type="text" id="serviceName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceEmail">Email Address</label>
+                        <input type="email" id="serviceEmail" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="servicePhone">Phone Number</label>
+                        <input type="tel" id="servicePhone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceCar">Car Model</label>
+                        <input type="text" id="serviceCar" class="form-control" placeholder="Enter your car model" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="serviceDate">Preferred Date</label>
+                        <input type="date" id="serviceDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceType">Service Type</label>
+                        <select id="serviceType" class="form-control" required>
+                            <option value="">Select service type</option>
+                            <option value="maintenance">Regular Maintenance</option>
+                            <option value="repair">Repair Service</option>
+                            <option value="inspection">Vehicle Inspection</option>
+                            <option value="detailing">Car Detailing</option>
+                            <option value="custom">Custom Service</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Service Description</label>
+                    <textarea id="serviceDescription" class="form-control" rows="4" placeholder="Describe the service needed..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Schedule Service</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Luxe Motors</h3>
+                <p>Your premier destination for luxury automobiles and exceptional service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#showcase">Our Collection</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#test-drive">Test Drive</a></li>
+                    <li><a href="#service-booking">Service Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Premium District</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@luxemotors.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-7PM</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new arrivals and exclusive offers.</p>
+                <form id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Luxe Motors. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+    <div class="car-details-modal" id="carDetailsModal">
+        <div class="modal-content">
+            <div class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="modal-header">
+                <img src="" alt="" class="main-image" id="modalMainImage">
+            </div>
+            
+            <div class="image-gallery" id="imageGallery">
+            </div>
+            
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-price" id="modalPrice"></div>
+                <div class="video-section">
+                    <h3>Experience the Drive</h3>
+                    <div class="video-container">
+                        <iframe src="" id="modalVideo" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="specs-grid" id="modalSpecs">
+                </div>
+                
+                <div class="description-section">
+                    <h3>About This Vehicle</h3>
+                    <p id="modalDescription"></p>
+                    <div class="features-list" id="modalFeatures">
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="bookTestDriveFromModal()">Book Test Drive</button>
+                    <button class="btn btn-secondary" onclick="requestQuoteFromModal()">Request Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="toast-message" id="toastMessage">
+            Your request has been submitted successfully!
+        </div>
+        <div class="toast-close" id="toastClose">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+ <script src="js/car.js"></script>
+</body>
+</html>
